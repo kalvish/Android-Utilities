@@ -1,4 +1,4 @@
-package edu.mit.smart.fmsurvey.android.gpsperiodic;
+package packagename;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -44,13 +44,13 @@ public class LogToFile implements Runnable {
 	private static void createFileOnDevice(Boolean append) throws IOException {
 		if (LogFilePath == null) {
 			File logDirectory = new File(
-					Environment.getExternalStorageDirectory(), "MOVE_TEST/Logs/");
+					Environment.getExternalStorageDirectory(), "FolderToStore/Logs/");
 			if (!logDirectory.exists()) {
 				logDirectory.mkdirs();
 			}
 
 			if (logDirectory.canWrite()) {
-				LogFilePath = new File(logDirectory, "gpsperiodic.txt");
+				LogFilePath = new File(logDirectory, "fileToStore.txt");
 			}
 		}
 	}
